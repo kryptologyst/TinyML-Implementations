@@ -1,0 +1,50 @@
+# TinyML Implementations - Requirements
+
+# Core ML Libraries
+numpy>=1.21.0
+pandas>=1.3.0
+scikit-learn>=1.0.0
+tqdm>=4.62.0
+
+# Deep Learning Frameworks
+tensorflow>=2.10.0
+tensorflow-model-optimization>=0.7.0
+torch>=1.12.0
+torchvision>=0.13.0
+
+# Model Optimization
+onnx>=1.12.0
+onnxruntime>=1.12.0
+tf2onnx>=1.13.0
+
+# Configuration and Utilities
+pyyaml>=6.0
+omegaconf>=2.2.0
+matplotlib>=3.5.0
+plotly>=5.10.0
+
+# Optional Edge Frameworks
+# tensorrt>=8.0.0  # NVIDIA TensorRT (optional)
+# openvino>=2022.1.0  # Intel OpenVINO (optional)
+# coremltools>=6.0.0  # Apple CoreML (optional)
+
+# Development Tools
+black>=22.0.0
+ruff>=0.0.200
+pytest>=7.0.0
+pytest-cov>=3.0.0
+
+# Demo and Visualization
+streamlit>=1.15.0
+gradio>=3.0.0
+
+# IoT and Communication (optional)
+# paho-mqtt>=1.6.0
+# kafka-python>=2.0.0
+# websockets>=10.0
+
+# Signal Processing (optional)
+# opencv-python>=4.6.0
+# scikit-image>=0.19.0
+# librosa>=0.9.0
+# soundfile>=0.10.0

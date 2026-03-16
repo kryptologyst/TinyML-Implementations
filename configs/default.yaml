@@ -1,0 +1,58 @@
+# TinyML Project Configuration
+
+# Model Configuration
+model:
+  input_shape: [28, 28, 1]
+  num_classes: 10
+  seed: 42
+
+# Training Configuration
+training:
+  epochs: 10
+  batch_size: 32
+  learning_rate: 0.001
+  validation_split: 0.1
+  early_stopping_patience: 3
+  reduce_lr_patience: 2
+
+# Model Types
+models:
+  baseline:
+    conv_filters: [8, 16]
+    dense_units: [32]
+    dropout_rate: 0.2
+  
+  tiny:
+    conv_filters: [4]
+    dense_units: [8]
+    dropout_rate: 0.0
+  
+  pruned:
+    initial_sparsity: 0.0
+    final_sparsity: 0.5
+    begin_step: 0
+    end_step: 1000
+
+# Export Configuration
+export:
+  formats: ["tflite_float32", "tflite_int8", "onnx"]
+  quantization_types: ["float32", "int8"]
+  representative_samples: 100
+
+# Benchmark Configuration
+benchmark:
+  num_runs: 100
+  warmup_runs: 10
+  input_shape: [1, 28, 28, 1]
+
+# Device Configuration
+device:
+  preferred_device: "auto"  # auto, cuda, cpu, mps
+  memory_growth: true
+  deterministic: true
+
+# Logging Configuration
+logging:
+  level: "INFO"
+  file: "training.log"
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
